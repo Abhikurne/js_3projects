@@ -5,18 +5,19 @@
     <title>Digital Clock</title>
     <style>
         body {
-            background-color: #222;
+            background-color: #333;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         .Clock {
-            position: absolute;
-            color: #00ff00;
-            font-size: 80px;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
+            color: #ff9933; /* Change text color to orange */
+            font-size: 100px; /* Increase font size */
             font-family: "Arial", sans-serif;
-            letter-spacing: 10px;
+            letter-spacing: 5px; /* Reduce letter spacing */
         }
     </style>
 </head>
@@ -44,7 +45,7 @@
             m = (m < 10) ? "0" + m : m;
             s = (s < 10) ? "0" + s : s;
 
-            document.getElementById("DigitalClock").innerHTML = h + ":" + m + ":" + s + session;
+            document.getElementById("DigitalClock").innerHTML = h + ":" + m + ":" + s + " " + session;
 
             setTimeout(showTime, 1000);
         }
